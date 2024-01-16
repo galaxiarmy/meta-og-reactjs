@@ -5,6 +5,8 @@ import reportWebVitals from "./reportWebVitals";
 import { hydrate } from "react-dom";
 import { render } from "react-dom";
 import { HelmetProvider } from "react-helmet-async";
+import * as ReactDOM from 'react-dom';
+
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -15,7 +17,7 @@ import { HelmetProvider } from "react-helmet-async";
 
 const helmetContext = {};
 
-const root = document.getElementById("root");
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <StrictMode>
