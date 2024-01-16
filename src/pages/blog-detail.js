@@ -10,11 +10,6 @@ function BlogDetail() {
 
   const postId = new URLSearchParams(location.search).get("id");
 
-  console.log('test params', params)
-
-  console.log('use params', params)
-  console.log("test location state", location);
-
   const [dataBlog, setDataBlog] = useState(null);
 
   const getDataBlogDetail = async (id) => {
@@ -33,7 +28,6 @@ function BlogDetail() {
     }
   };
 
-  console.log('test data blog', dataBlog)
   useEffect(() => {
     getDataBlogDetail(params.id);
   }, []);

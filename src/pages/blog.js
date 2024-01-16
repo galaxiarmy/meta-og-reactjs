@@ -31,8 +31,8 @@ const Blog = () => {
     <div style={{ padding: 20 }}>
         <Helmet htmlAttributess>
           <title>Blog Detail</title>
-          <meta proerty="og:title" content="Blog Detail Title" />
-          <meta property="og:description" content="Blog Detail Description" />
+          <meta proerty="og:title" content="Project Detail" />
+          <meta property="og:description" content="Project Detail Description" />
           <meta property="og:url" content={"https://master--precious-dasik-288c64.netlify.app/blog"} />
           <meta property="og:image" content={"https://api.slingacademy.com/public/sample-photos/6.jpeg"} />
         </Helmet>
