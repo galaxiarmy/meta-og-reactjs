@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useLocation, useParams } from "react-router-dom";
+import ButtonWA from "../components/button-wa";
 
 function BlogDetail() {
   const location = useLocation();
@@ -37,7 +38,7 @@ function BlogDetail() {
   }, []);
 
   return (
-    <div>
+    <div style={{padding: 20}}>
       <Helmet htmlAttributess>
           <title>{dataBlog?.title}</title>
           <meta proerty="og:title" content={dataBlog?.title} />
@@ -50,6 +51,7 @@ function BlogDetail() {
         <img src={`${dataBlog?.url}`} width={100} height={100} alt="test" />
         <p>{dataBlog?.title}</p>
         <p>{dataBlog?.description}</p>
+        <ButtonWA blogs={dataBlog} />
       </div>
     </div>
   );
