@@ -16,7 +16,7 @@ function ButtonWA({blogs}) {
         let title="Nama: "
         let title1="Tanggal: "
         let title2="Jam: "
-        let project=`https://master--precious-dasik-288c64.netlify.app/${blogs?.id}`
+        let project=`https://master--precious-dasik-288c64.netlify.app/blog-detail/${blogs?.id}`
     
         // Saya tertarik ingin lihat lahan Sugito dan bertemu tim Kitani.
     
