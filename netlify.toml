@@ -1,3 +1,2 @@
-[build]
-  publish = "build/"
-  functions = "./server/"
+[functions]
+  directory = "./server/"
