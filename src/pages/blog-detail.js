@@ -33,6 +33,7 @@ function BlogDetail() {
     }
   };
 
+  console.log('test data blog', dataBlog)
   useEffect(() => {
     getDataBlogDetail(params.id);
   }, []);
@@ -43,7 +44,7 @@ function BlogDetail() {
           <title>{dataBlog?.title}</title>
           <meta proerty="og:title" content={dataBlog?.title} />
           <meta property="og:description" content={dataBlog?.description} />
-          <meta property="og:url" content={dataBlog?.url} />
+          <meta property="og:url" content={`https://master--precious-dasik-288c64.netlify.app/blog-detail/${dataBlog?.id}`} />
           <meta property="og:image" content={dataBlog?.url} />
      </Helmet>
 
