@@ -8,7 +8,7 @@ const Blog = () => {
   let navigate = useNavigate();
 
   const getDataBlogDetail = async () => {
-    const baseURL = `https://api.slingacademy.com/v1/sample-data/photos?offset=5&limit=20`;
+    const baseURL = `https://api.slingacademy.com/v1/sample-data/photos?offset=5&limit=40`;
 
     try {
       const response = await axios.get(baseURL);
