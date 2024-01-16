@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
 import { useLocation, useParams } from "react-router-dom";
 import ButtonWA from "../components/button-wa";
+import { Seo } from "../components/seo";
 
 function BlogDetail() {
   const location = useLocation();
@@ -34,13 +34,19 @@ function BlogDetail() {
 
   return (
     <div style={{padding: 20}}>
-      <Helmet htmlAttributess>
+      <Seo
+       title={dataBlog?.title}
+       description={dataBlog?.description}
+       url={`https://master--precious-dasik-288c64.netlify.app/blog-detail/${dataBlog?.id}`}
+       image={dataBlog?.url}
+       />
+      {/* <Helmet htmlAttributess>
           <title>{dataBlog?.title}</title>
           <meta proerty="og:title" content={dataBlog?.title} />
           <meta property="og:description" content={dataBlog?.description} />
           <meta property="og:url" content={`https://master--precious-dasik-288c64.netlify.app/blog-detail/${dataBlog?.id}`} />
           <meta property="og:image" content={dataBlog?.url} />
-     </Helmet>
+     </Helmet> */}
 
       <div>
         <img src={`${dataBlog?.url}`} width={100} height={100} alt="test" />

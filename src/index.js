@@ -1,9 +1,10 @@
-import React from 'react';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { hydrate } from 'react-dom';
-import { render } from 'react-dom';
+import React, { StrictMode } from "react";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { hydrate } from "react-dom";
+import { render } from "react-dom";
+import { HelmetProvider } from "react-helmet-async";
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -12,12 +13,18 @@ import { render } from 'react-dom';
 //   </React.StrictMode>
 // );
 
+const helmetContext = {};
+
 const rootElement = document.getElementById("root");
 if (rootElement.hasChildNodes()) {
   hydrate(
     <>
       {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-      <App />
+      <StrictMode>
+        <HelmetProvider context={helmetContext}>
+          <App />
+        </HelmetProvider>
+      </StrictMode>
     </>,
     rootElement
   );
@@ -25,7 +32,11 @@ if (rootElement.hasChildNodes()) {
   render(
     <>
       {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-      <App />
+      <StrictMode>
+        <HelmetProvider context={helmetContext}>
+          <App />
+        </HelmetProvider>
+      </StrictMode>
     </>,
     rootElement
   );
