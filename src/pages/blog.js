@@ -33,7 +33,7 @@ const Blog = () => {
           <title>Blog Detail</title>
           <meta property="og:title" content="Blog Detail Title" />
           <meta property="og:description" content="Blog Detail Description" />
-          <meta property="og:url" content={"https://master--precious-dasik-288c64.netlify.app/blog"} />
+          <meta property="og:url" content={"https://precious-dasik-288c64.netlify.app/blog"} />
           <meta property="og:image" content={"https://api.slingacademy.com/public/sample-photos/6.jpeg"} />
         </Helmet>
         {/* <Seo 
