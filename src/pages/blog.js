@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Seo } from "../components/seo";
+import { Helmet } from "react-helmet";
 
 const Blog = () => {
   const [dataBlog, setDataBlog] = useState(null);
@@ -29,21 +29,21 @@ const Blog = () => {
 
   return (
     <div style={{ padding: 20 }}>
-        {/* <Helmet htmlAttributess>
+        <Helmet htmlAttributess>
           <title>Blog Detail</title>
-          <meta proerty="og:title" content="Blog Detail Title" />
+          <meta property="og:title" content="Blog Detail Title" />
           <meta property="og:description" content="Blog Detail Description" />
           <meta property="og:url" content={"https://master--precious-dasik-288c64.netlify.app/blog"} />
           <meta property="og:image" content={"https://api.slingacademy.com/public/sample-photos/6.jpeg"} />
-        </Helmet> */}
-        <Seo 
+        </Helmet>
+        {/* <Seo 
           title={"Blog Detail Title"}
           description={"Blog Detail Description"}
           url={"https://master--precious-dasik-288c64.netlify.app/blog"}
           image={"https://api.slingacademy.com/public/sample-photos/6.jpeg"}
-        />
+        /> */}
 
-      <h1>Blog Helmet Asyncs</h1>
+      <h1>Blog Helmet Normalize</h1>
 
       {dataBlog ? (
         <ul>
