@@ -43,7 +43,7 @@ const Blog = () => {
           image={"https://api.slingacademy.com/public/sample-photos/6.jpeg"}
         />
 
-      <h1>Blog Helmet Async</h1>
+      <h1>Blog Helmet Asyncs</h1>
 
       {dataBlog ? (
         <ul>

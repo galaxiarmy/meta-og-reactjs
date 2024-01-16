@@ -15,32 +15,41 @@ import { HelmetProvider } from "react-helmet-async";
 
 const helmetContext = {};
 
-const rootElement = document.getElementById("root");
-if (rootElement.hasChildNodes()) {
-  hydrate(
-    <>
-      {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-      <StrictMode>
-        <HelmetProvider context={helmetContext}>
-          <App />
-        </HelmetProvider>
-      </StrictMode>
-    </>,
-    rootElement
-  );
-} else {
-  render(
-    <>
-      {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-      <StrictMode>
-        <HelmetProvider context={helmetContext}>
-          <App />
-        </HelmetProvider>
-      </StrictMode>
-    </>,
-    rootElement
-  );
-}
+const root = document.getElementById("root");
+
+root.render(
+  <StrictMode>
+    <HelmetProvider context={helmetContext}>
+      <App />
+    </HelmetProvider>
+  </StrictMode>
+);
+
+// const root = createRoot(rootElement);
+
+// if (rootElement.hasChildNodes()) {
+//   hydrate(
+//     <>
+//       {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+//       <StrictMode>
+//         <HelmetProvider context={helmetContext}>
+//           <App />
+//         </HelmetProvider>
+//       </StrictMode>
+//     </>,
+//     rootElement
+//   );
+// } else {
+// root.render(
+//     {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+
+//     <StrictMode>
+//       <HelmetProvider context={helmetContext}>
+//         <App />
+//       </HelmetProvider>
+//     </StrictMode>
+// );
+// }
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
