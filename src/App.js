@@ -10,7 +10,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog-detail" element={<BlogDetail />} />
+          <Route path="/blog-detail/:id" element={<BlogDetail />} />
         </Routes>
       </Router>
     </React.Fragment>

@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { useLocation, useParams } from "react-router-dom";
 
 function BlogDetail() {
@@ -7,6 +8,8 @@ function BlogDetail() {
   const params = useParams();
 
   const postId = new URLSearchParams(location.search).get("id");
+
+  console.log('test params', params)
 
   console.log('use params', params)
   console.log("test location state", location);
@@ -30,18 +33,18 @@ function BlogDetail() {
   };
 
   useEffect(() => {
-    getDataBlogDetail(postId);
+    getDataBlogDetail(params.id);
   }, []);
 
   return (
     <div>
-      {/* <Helmet htmlAttributess>
+      <Helmet htmlAttributess>
           <title>{dataBlog?.title}</title>
-          <meta property="og:title" content={dataBlog?.title} />
+          <meta proerty="og:title" content={dataBlog?.title} />
           <meta property="og:description" content={dataBlog?.description} />
           <meta property="og:url" content={dataBlog?.url} />
           <meta property="og:image" content={dataBlog?.url} />
-    </Helmet> */}
+     </Helmet>
 
       <div>
         <img src={`${dataBlog?.url}`} width={100} height={100} alt="test" />
