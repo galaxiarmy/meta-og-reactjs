@@ -14,7 +14,6 @@ const Blog = () => {
 
       if (response.status === 200) {
         setDataBlog(response?.data?.photos);
-        console.log("test response", response);
       } else {
         setDataBlog(null);
       }
