@@ -1,11 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 const Blog = () => {
   const [dataBlog, setDataBlog] = useState(null);
-  let navigate = useNavigate();
 
   const getDataBlogDetail = async () => {
     const baseURL = `https://api.slingacademy.com/v1/sample-data/photos?offset=5&limit=40`;
@@ -60,12 +59,6 @@ const Blog = () => {
                   {index + 1}. {capsule.title} (Click Details)
                 </p>
               </Link>
-
-              {/* <p onClick={() => {
-                  navigate(`blog-detail/${capsule.id}`)
-                }} style={{ fontWeight: "bold" }}>
-                  {index + 1}. {capsule.title} (Click Details In Here)
-                </p> */}
               <p>{capsule.description}</p>
             </div>
           ))}
