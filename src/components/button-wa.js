@@ -16,7 +16,7 @@ function ButtonWA({blogs}) {
         let title="Nama: "
         let title1="Tanggal: "
         let title2="Jam: "
-        let project=`https://precious-dasik-288c64.netlify.app/blog-detail/${blogs?.id}`
+        let project=`https://master--precious-dasik-288c64.netlify.app/blog-detail/${blogs?.id}`
     
         // Saya tertarik ingin lihat lahan Sugito dan bertemu tim Kitani.
     
@@ -41,7 +41,7 @@ function ButtonWA({blogs}) {
       </button>
     <div style={{ backgroundColor: "green", width: 200, height: 40, padding: 6, marginTop: 12}}>
       <WhatsappShareButton
-        url={`https://precious-dasik-288c64.netlify.app/blog-detail/${blogs?.id}`}
+        url={`https://master--precious-dasik-288c64.netlify.app/blog-detail/${blogs?.id}`}
         title="Ayo menanam bawang"
         separator=" : "
       >
