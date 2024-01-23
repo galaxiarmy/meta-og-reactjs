@@ -45,7 +45,7 @@ function BlogDetail() {
           <meta property="og:title" content={dataBlog?.title} />
           <meta property="og:description" content={dataBlog?.description} />
           <meta property="og:url" content={`https://master--precious-dasik-288c64.netlify.app/blog-detail/${dataBlog?.id}`} />
-          <meta property="og:image" content={`https://p16-capcut-va.ibyteimg.com/tos-maliva-i-6rr7idwo9f-us/1698894438617.238~tplv-6rr7idwo9f-image.image`} />
+          <meta property="og:image" content={`https://rare-gallery.com/uploads/posts/526448-colors.jpg`} />
      </Helmet>
 
       <div>
