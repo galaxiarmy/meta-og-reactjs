@@ -45,7 +45,7 @@ function BlogDetail() {
           <meta property="og:title" content={dataBlog?.title} />
           <meta property="og:description" content={dataBlog?.description} />
           <meta property="og:url" content={`https://master--precious-dasik-288c64.netlify.app/blog-detail/${dataBlog?.id}`} />
-          <meta property="og:image" content={dataBlog?.url} />
+          <meta property="og:image" content={`https://fastly.picsum.photos/id/731/328/240.jpg?hmac=PnEhTt_eKClIYIrHOlm09ijt_Ln8BKkNCKHGT6v9Kl4`} />
      </Helmet>
 
       <div>
