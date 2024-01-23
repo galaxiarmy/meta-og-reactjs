@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import ButtonWA from "../components/button-wa";
 import { Helmet } from "react-helmet";
+import TestImage from "../components/test-image.jpg"
 
 function BlogDetail() {
   const location = useLocation();
@@ -45,13 +46,14 @@ function BlogDetail() {
           <meta property="og:title" content={dataBlog?.title} />
           <meta property="og:description" content={dataBlog?.description} />
           <meta property="og:url" content={`https://master--precious-dasik-288c64.netlify.app/blog-detail/${dataBlog?.id}`} />
-          <meta property="og:image" content={`https://rare-gallery.com/uploads/posts/526448-colors.jpg`} />
+          <meta property="og:image" content={TestImage} />
      </Helmet>
 
       <div>
         <img src={`${dataBlog?.url}`} width={100} height={100} alt="test" />
         <p>{dataBlog?.title}</p>
         <p>{dataBlog?.description}</p>
+        <img src={TestImage} width={100} height={100} alt="test-img" />
         <ButtonWA blogs={dataBlog} />
       </div>
     </div>
